@@ -1,0 +1,44 @@
+.ani1 {
+  background: linear-gradient(
+    90deg,
+    #cda45e,
+    #ffffff,
+    #cda45e
+  );
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: aniColorSlide 4s linear infinite,
+             glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes aniColorSlide {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow:
+      0 0 4px rgba(205, 164, 94, 0.3),
+      0 0 8px rgba(205, 164, 94, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 8px rgba(205, 164, 94, 0.7),
+      0 0 16px rgba(205, 164, 94, 0.5),
+      0 0 24px rgba(205, 164, 94, 0.3);
+  }
+  100% {
+    text-shadow:
+      0 0 4px rgba(205, 164, 94, 0.3),
+      0 0 8px rgba(205, 164, 94, 0.2);
+  }
+}
